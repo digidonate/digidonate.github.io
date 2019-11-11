@@ -1,18 +1,65 @@
-<!-- Start Footer -->
-<footer class="main-footer">
-    <div class="container-fluid">
-        
-        <ul class="social">
-            {% if site.facebook %}<li><a href="{{ site.facebook }}"><svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a></li>{% endif %}
-            {% if site.twitter %}<li><a href="{{ site.twitter }}"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a></li>{% endif %}
-            {% if site.instagram %}<li><a href="{{ site.instagram }}"><svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg></a></li>{% endif %}
-            {% if site.youtube %}<li><a href="{{ site.youtube }}"><svg class="icon icon-youtube"><use xlink:href="#icon-youtube"></use></svg></a></li>{% endif %}
-            {% if site.skype %}<li><a href="{{ site.skype }}"><svg class="icon icon-skype"><use xlink:href="#icon-skype"></use></svg></a></li>{% endif %}
-            {% if site.feed %}<li><a href="#"><svg class="icon icon-feed"><use xlink:href="#icon-feed"></use></svg></a></li>{% endif %}
+<!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          {% if site.email %}
+          <li class="list-inline-item">
+            <a href="mailto:{{ site.email | encode_email }}">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.twitter_username %}
+          <li class="list-inline-item">
+            <a href="https://twitter.com/{{ site.twitter_username }}">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.facebook_username %}
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/{{ site.facebook_username }}">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.linkedin_username %}
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.github_username %}
+          <li class="list-inline-item">
+            <a href="https://github.com/{{ site.github_username }}">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
         </ul>
-
-        <small>{% if site.copyright %} {{ site.copyright }} {% endif %}</small>
-
+        <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}</p>
+      </div>
     </div>
+  </div>
 </footer>
-<!-- End Footer -->
