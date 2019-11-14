@@ -10,17 +10,25 @@
 <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 <meta property="og:image" content="{% if page.background %}{{site.url}}{{ page.background | prepend: site.baseurl | replace: '//', '/' }}{% else %}<!--test123 -->{% endif %}">
 <meta property="og:url" content="{{site.url}}{{page.url}}">
-<meta name="twitter:card" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+<!--<meta name="twitter:card" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">-->
     
     
     <!--  Non-Essential, But Recommended -->
 
 <meta property="og:site_name" content="{{ site.title | escape }}">
-<meta name="twitter:image:alt" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+<!--<meta name="twitter:image:alt" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
 <meta name="twitter:site" content="@detaildata" />
 <meta name="twitter:url" content="{{site.url}}{{page.url}}" />
 <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
-<meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
+<meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />-->
+    
+<meta property="twitter:card" content="summary">
+<meta property="twitter:site" content="simplytestable">
+<meta property="twitter:title" content="Title Here">
+<meta property="twitter:description" content="Description Here">
+<meta property="twitter:creator" content="simplytestable">
+<meta property="twitter:image:src" content="http://placehold.it/350x150">        
+<meta property="twitter:domain" content="simplytestable.com">
 
 <!--  Non-Essential, But Required for Analytics -->
 <!--
