@@ -23,12 +23,12 @@
 <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />-->
     
 <meta property="twitter:card" content="summary">
-<meta property="twitter:site" content="simplytestable">
-<meta property="twitter:title" content="Title Here">
-<meta property="twitter:description" content="Description Here">
-<meta property="twitter:creator" content="simplytestable">
-<meta property="twitter:image:src" content="http://placehold.it/350x150">        
-<meta property="twitter:domain" content="simplytestable.com">
+<meta property="twitter:site" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+<meta property="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+<meta property="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+<meta property="twitter:creator" content="{{ site.title | escape }}">
+<meta property="twitter:image:src" content="{% if page.background %}{{site.url}}{{ page.background | prepend: site.baseurl | replace: '//', '/' }}{% else %}<!--test123 -->{% endif %}">        
+<meta property="twitter:domain" content="{{site.url}}">
 
 <!--  Non-Essential, But Required for Analytics -->
 <!--
